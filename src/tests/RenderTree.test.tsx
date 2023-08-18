@@ -11,4 +11,17 @@ describe("RenderTree", () => {
     const heading = getByText("Checkbox Tree");
     expect(heading).toBeInTheDocument();
   });
+
+  test("renders parent node initially ", () => {
+    render(<RenderTree />);
+    // Check that the parent nodes are present
+    const dames = screen.getByText("Dames");
+    expect(dames).toBeInTheDocument();
+
+    const heren = screen.getByText("Heren");
+    expect(heren).toBeInTheDocument();
+
+    const kids = screen.getByText("Kids");
+    expect(kids).toBeInTheDocument();
+  });
 });

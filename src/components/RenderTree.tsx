@@ -26,7 +26,6 @@ const RenderTree: React.FC = () => {
     if (!expandedKeys.includes(parentNodeKey)) {
       setExpandedKeys([...expandedKeys, parentNodeKey]);
     }
-
     setCheckedKeys(checkedKeys as string[]);
   };
 
